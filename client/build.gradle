@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'client.code'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+}
+application {
+	mainClass = 'client.code.Client'
+}
+run {
+	standardInput(System.in)
+}
+jar {
+	manifest {
+		attributes(
+				'Main-Class': 'client.code.Client'
+		)
+	}
+}
+
+test {
+    useJUnitPlatform()
+}
