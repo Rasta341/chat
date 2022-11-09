@@ -1,0 +1,8 @@
+make
+	installServer 	# build сервера
+	runServer 		# build&запуск сервера
+	cleanServer 	# удаление директории ./build
+
+	installClient 	# build клиента
+	runClient 		# build&запуск клиента
+	cleanClient 	# удаление директории ./build
